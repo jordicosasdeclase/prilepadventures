@@ -212,7 +212,7 @@ combate () {
             echo "¡Empate!" | pv -qL 30
         elif [[ ("$jugador" == 1 && "$enemigo" == 3) || 
                 ("$jugador" == 2 && "$enemigo" == 1) || 
-                ("$jugador" == 3 && "$enemigo" == 3) ]]; then
+                ("$jugador" == 3 && "$enemigo" == 2) ]]; then
             echo "¡Has ganado esta ronda!" | pv -qL 30
             ((ps_enemigo -= $pot_jugador))  # Restar PS al enemigo
         else
